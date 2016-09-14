@@ -3,14 +3,19 @@
 }
 
 <div class="jumbotron">
-    <h1>CodeDocs Cloud and Software Development Services</h1>
-    <p class="lead"><i>Taking your company to the Cloud</i></p>
 
 </div>
 
+@*<div class="row">
+    <div class="col-md-12">
+        <h1>CodeDocs Cloud and Software Development Services</h1>
+        <p class="lead"><i>Taking your company to the Cloud</i></p>
+    </div>
+</div>*@
+
 <div class="row">
     <div class="col-md-4">
-        <h2>First steps</h2>
+        <h2>Cloud</h2>
         <p>
             Let CodeDocs help take your company's first steps to the Cloud. 
         </p>
@@ -19,7 +24,7 @@
         </p>
         <p class="btn btn-default">@Html.ActionLink("Learn More", "FirstSteps", "Home")</p>
     </div>
-    <div class="col-md-4">
+    @*<div class="col-md-4">
         <h2>Next steps</h2>
         <p>Now you've moved some of your IT capability to the cloud what's next. 
         </p>
@@ -31,7 +36,20 @@
         <p>CodeDocs can help ensure you're getting value for money from your cloud investment through monitoring and notifications</p>
         <p>We can help configure auto-scaling of your Virtual Machines, Web Sites and Databases up and down as required by the demand on a service, reducing costs and optimising performance.</p>
         <p class="btn btn-default">@Html.ActionLink("Learn More", "Optimise", "Home")</p>
-    </div>
+    </div>*@
+    <div class="col-md-4">
+            <h2>Software Development</h2>
+            <p>CodeDocs specialise in software development
+            </p>
+            <p>We can develop software using the Microsoft development stack to integrate with your companies IT systems and user expectations.  We have many years experience in creating Intranets, Extranets and web sites and can now offer hosting in the cloud.</p>
+            <p class="btn btn-default">@Html.ActionLink("Learn More", "Development", "Home")</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Consultancy</h2>
+            <p>CodeDocs can help with general IT consultancy</p>
+            <p>We can work with you and your company to determine if the direction your IT management is taking is the right one.  As a certified TOGAF Archtect we can look at the enterprise level of your IT architecture.</p>
+            <p class="btn btn-default">@Html.ActionLink("Learn More", "Consult", "Home")</p>
+        </div>
 </div>
 <br/>
 <div class="row">

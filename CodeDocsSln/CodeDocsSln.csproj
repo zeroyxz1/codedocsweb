@@ -125,6 +125,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\BannerP.jpeg" />
+    <Content Include="Images\BannerPR.jpeg" />
+    <Content Include="Images\CloudStepsP.jpeg" />
+    <Content Include="Images\CloudStepsPR.jpeg" />
+    <Content Include="Images\ConsultP.jpeg" />
+    <Content Include="Images\ConsultPR.jpeg" />
+    <Content Include="Images\DevelopmentP.jpeg" />
+    <Content Include="Images\DevelopmentPR.jpeg" />
     <Content Include="Images\MCSD-ASA logo-BW.png" />
     <Content Include="Images\stepstocloud.jpg" />
     <Content Include="Images\togaf9-certified_web.png" />
@@ -161,6 +169,8 @@
     <Content Include="Views\Home\FirstSteps.cshtml" />
     <Content Include="Views\Home\NextSteps.cshtml" />
     <Content Include="Views\Home\Optimise.cshtml" />
+    <Content Include="Views\Home\Development.cshtml" />
+    <Content Include="Views\Home\Consult.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

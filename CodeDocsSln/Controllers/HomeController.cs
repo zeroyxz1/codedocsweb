@@ -47,5 +47,19 @@ namespace CodeDocsSln.Controllers
 
             return View();
         }
+
+        public ActionResult Development()
+        {
+            ViewBag.Message = "Contact CodeDocs regarding how your business can take advantage of the Cloud.";
+
+            return View();
+        }
+
+        public ActionResult Consult()
+        {
+            ViewBag.Message = "Contact CodeDocs regarding how your business can take advantage of the Cloud.";
+
+            return View();
+        }
     }
 }
