@@ -24,7 +24,7 @@ textarea {
 }
 
 .jumbotron {
-    background-image: url('../Images/bannerpr.jpeg');
+    background-image: url('http://codedocs.azureedge.net/images/BannerPR.jpeg');
     height:461px;
 }
 
@@ -33,4 +33,11 @@ textarea {
      padding-right:10px;
 }
 
+.clear {
+    clear:both;
+}
+
+.about-padding{
+    padding-bottom:25px;
+}
 
