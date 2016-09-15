@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CodeDocsSln.Models;
 
 namespace CodeDocsSln.Controllers
 {
@@ -26,6 +27,13 @@ namespace CodeDocsSln.Controllers
             ViewBag.Message = "Contact CodeDocs regarding how your business can take advantage of the Cloud.";
 
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult SubmitEnquiry([Bind(Include="Name, Email, Comments")] Enquiry enquiry)
+        {
+            return View();//Needs to return thanks for your comments
         }
     }
 }
