@@ -20,46 +20,8 @@ namespace CodeDocsSln.Controllers
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Contact CodeDocs regarding how your business can take advantage of the Cloud.";
 
-            return View();
-        }
 
-        public ActionResult FirstSteps()
-        {
-            ViewBag.Message = "Contact CodeDocs regarding how your business can take advantage of the Cloud.";
-
-            return View();
-        }
-
-        public ActionResult NextSteps()
-        {
-            ViewBag.Message = "Contact CodeDocs regarding how your business can take advantage of the Cloud.";
-
-            return View();
-        }
-
-        public ActionResult Optimise()
-        {
-            ViewBag.Message = "Contact CodeDocs regarding how your business can take advantage of the Cloud.";
-
-            return View();
-        }
-
-        public ActionResult Development()
-        {
-            ViewBag.Message = "Contact CodeDocs regarding how your business can take advantage of the Cloud.";
-
-            return View();
-        }
-
-        public ActionResult Consult()
-        {
-            ViewBag.Message = "Contact CodeDocs regarding how your business can take advantage of the Cloud.";
-
-            return View();
-        }
+        
     }
 }
