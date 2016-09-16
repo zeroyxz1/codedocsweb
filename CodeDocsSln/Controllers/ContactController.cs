@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using CodeDocsSln.Models;
 using CodeDocsSln.DataAccess;
+using CodeDocsSln.ViewModels;
 
 namespace CodeDocsSln.Controllers
 {
@@ -27,8 +28,10 @@ namespace CodeDocsSln.Controllers
         public ActionResult Enquiry()
         {
             ViewBag.Message = "Contact CodeDocs regarding how your business can take advantage of the Cloud.";
-            
-            return View();
+
+            //Create an instance of the viewmodel and return it to the view
+            CreateEnquiryViewModel vm = new CreateEnquiryViewModel();
+            return View(vm);
         }
 
         public ActionResult EnquiryResponse()
@@ -42,14 +45,18 @@ namespace CodeDocsSln.Controllers
         {
             try
             {
+                enquiry.Id = Guid.NewGuid();
+                enquiry.SubmittedOn = DateTime.Now;
+
                 CodeDocsSln.DataAccess.DataStore ds = new DataStore();
                 ds.Save(enquiry);
 
-                ViewBag.SavedEnquiry = true; ;
+                ViewBag.SavedEnquiry = true;
             }
 
             catch (Exception ex)
             {
+                //TODO::Write this somewhere we can investigate later
                 ViewBag.SavedEnquiry = false;
             }
 
