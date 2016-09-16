@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CodeDocsSln.Models;
+using CodeDocsSln.DataAccess;
 
 namespace CodeDocsSln.Controllers
 {
@@ -22,18 +23,38 @@ namespace CodeDocsSln.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult Enquiry()
         {
             ViewBag.Message = "Contact CodeDocs regarding how your business can take advantage of the Cloud.";
+            
+            return View();
+        }
 
+        public ActionResult EnquiryResponse()
+        {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult SubmitEnquiry([Bind(Include="Name, Email, Comments")] Enquiry enquiry)
+        public ActionResult Enquiry([Bind(Include="Name, Email, Comments")] Enquiry enquiry)
         {
-            return View();//Needs to return thanks for your comments
+            try
+            {
+                CodeDocsSln.DataAccess.DataStore ds = new DataStore();
+                ds.Save(enquiry);
+
+                ViewBag.SavedEnquiry = true; ;
+            }
+
+            catch (Exception ex)
+            {
+                ViewBag.SavedEnquiry = false;
+            }
+
+
+            return View("EnquiryResponse");//Needs to return thanks for your comments
         }
     }
 }

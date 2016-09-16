@@ -1,0 +1,20 @@
+﻿@model CodeDocsSln.Models.Enquiry
+
+@{
+    ViewBag.Title = "EnquiryResponse";
+}
+
+<h2>EnquiryResponse</h2>
+<br/>
+
+<div class="row">
+    <div class="col-md-12">
+       @if (ViewBag.SavedEnquiry == true){
+           // This line has all content between matched <p> tags.
+        <p>Thanks for your enquiry it was successfully recorded and we aim to action it within the next 24 hours.</p>
+       } else {
+        <p>Unfortunately we couldn't successfully record your enquiry due to an error in the processing. Please e-mail your enquiry instead to <a href='mailto:peter.worlin@codedocs.co.uk'>peter.worlin@codedocs.co.uk</a></p>
+       }
+    </div>
+</div>
+
