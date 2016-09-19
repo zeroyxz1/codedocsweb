@@ -25,7 +25,7 @@ textarea {
 
 .jumbotron {
     background-image: url('http://codedocs.azureedge.net/images/BannerPR.jpeg');
-    height:461px;
+    height: 368px;
 }
 
 .img-tag{
@@ -43,4 +43,14 @@ textarea {
 
 .input-box-width{
     width:280px;
+}
+
+.codedocs-navbar:before{
+    content:"CodeDocs Cloud and Software Development";
+}
+
+@media (max-width:500px){
+    .codedocs-navbar:before{
+        content:"CodeDocs";
+    }
 }
