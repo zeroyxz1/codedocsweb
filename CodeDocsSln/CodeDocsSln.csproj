@@ -209,6 +209,7 @@
     <Content Include="Views\Services\Consult.cshtml" />
     <Content Include="Views\Contact\Enquiry.cshtml" />
     <Content Include="Views\Contact\EnquiryResponse.cshtml" />
+    <Content Include="Views\Home\AboutWeb.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

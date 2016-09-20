@@ -20,6 +20,11 @@ namespace CodeDocsSln.Controllers
             return View();
         }
 
+        public ActionResult AboutWeb()
+        {
+            return View();
+        }
+
 
 
         
