@@ -45,6 +45,10 @@ textarea {
     width:280px;
 }
 
+.contact-padding{
+    padding-top:25px;
+}
+
 .codedocs-navbar:before{
     content:"CodeDocs Cloud and Software Development";
 }
