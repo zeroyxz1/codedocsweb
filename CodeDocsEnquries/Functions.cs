@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs;
 using System.Net;
 using System.Diagnostics;
-
+using System.Configuration;
 using CodeDocsSln.Models;
 using SendGrid;
 
@@ -35,8 +35,8 @@ namespace CodeDocsEnquries
                 myMessage.Html = sb.ToString();
 
                 Trace.TraceInformation("Setting networkcredentials");
-                var username = "azure_c24d66353810a8a3249acad59bec5340@azure.com";
-                var password = "W0rkstation1";
+                var username = ConfigurationManager.AppSettings["un"];
+                var password = ConfigurationManager.AppSettings["pw"];
                 var creds = new NetworkCredential(username, password);
                 var transportWeb = new Web(creds);
 
