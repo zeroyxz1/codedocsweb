@@ -20,7 +20,14 @@ namespace CodeDocsEnquries
         // on an Azure Queue called queue.
         public static void ProcessQueueMessage([QueueTrigger("enquiries")] Enquiry enquiry, TextWriter log)
         {
-            Trace.TraceInformation("here");
+            Trace.TraceInformation("In ProcessQueueMessage");
+            SendEmail(enquiry);
+            RecordMessageInTable(enquiry);
+            
+        }
+
+        private static void SendEmail(Enquiry enquiry)
+        {
             Trace.TraceInformation("In the GenerateEnquiryAlert method");
             try
             {
@@ -51,6 +58,11 @@ namespace CodeDocsEnquries
             {
                 Trace.TraceError("Error: " + ex.ToString());
             }
+        }
+
+        private static void RecordMessageInTable(Enquiry enquiry)
+        {
+
         }
     }
 }
